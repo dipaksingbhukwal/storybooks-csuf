@@ -1,5 +1,5 @@
-module.exports = {
-  mongoURI:'mongodb://crud:abcd1234@ds159263.mlab.com:59263/storybook-csuf-dev',
-  googleClientID:'990663010172-3sal765k7saeql49nvb9qvg4bqph558s.apps.googleusercontent.com',
-  googleClientSecret:'d2bF94GupMw1VlV53zQnhy5f'
+if(process.env.NODE_ENV === 'production'){
+  module.exports = require('./keys_prod');
+} else {
+  module.exports = require('./keys_dev');
 }
